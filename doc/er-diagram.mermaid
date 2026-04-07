@@ -1,0 +1,39 @@
+erDiagram
+    users {
+        bigint id PK
+        varchar email UK "NOT NULL / ログインに使用"
+        varchar password_hash "NOT NULL / bcryptでハッシュ化"
+        timestamp created_at "NOT NULL"
+        timestamp updated_at "NOT NULL"
+    }
+
+    password_reset_tokens {
+        bigint id PK
+        bigint user_id FK "NOT NULL"
+        varchar token UK "NOT NULL / ランダム文字列"
+        timestamp expires_at "NOT NULL / 有効期限（例：1時間）"
+        timestamp created_at "NOT NULL"
+    }
+
+    categories {
+        bigint id PK
+        varchar name UK "NOT NULL / 主食・主菜・副菜・汁物・その他"
+        int sort_order "NOT NULL / 表示順"
+        timestamp created_at "NOT NULL"
+    }
+
+    recipes {
+        bigint id PK
+        bigint user_id FK "NOT NULL"
+        bigint category_id FK "NOT NULL"
+        varchar name "NOT NULL / 料理名"
+        decimal point "NOT NULL / 0.1〜1.0（1食の構成比）"
+        text memo "NULL許容"
+        timestamp created_at "NOT NULL / 一覧の並び順に使用"
+        timestamp updated_at "NOT NULL"
+        timestamp deleted_at "NULL = 有効 / 論理削除"
+    }
+
+    users ||--o{ password_reset_tokens : "1人が複数のトークンを持つ"
+    users ||--o{ recipes : "1人が複数のレシピを持つ"
+    categories ||--o{ recipes : "1カテゴリに複数のレシピ"
