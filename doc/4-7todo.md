@@ -10,7 +10,7 @@
 
 - [x] フロントエンド技術選定 → **Vue 3 + Vite**（Vue Router / Pinia を使用）
 - [x] バックエンド技術選定 → **Java / Spring Boot**（Spring Security を使用）
-- [x] データベース選定 → **PostgreSQL**
+- [x] データベース選定 → **MySQL**
 - [x] ホスティング・デプロイ先選定 → **Vercel**（フロント）/ **Railway**（バックエンド+DB、月$5〜）
 - [ ] 開発環境構築方針（Docker使用有無など）
 
@@ -118,7 +118,7 @@
 |---|---|
 | フロントエンド | Vue 3 + Vite（Vue Router / Pinia） |
 | バックエンド | Java / Spring Boot（Spring Security） |
-| データベース | PostgreSQL |
+| データベース | MySQL |
 | フロントホスティング | Vercel（無料枠） |
 | バックエンド+DBホスティング | Railway（月$5〜） |
 | 認証方式 | メールアドレス＋パスワード（JWT / Spring Security） |

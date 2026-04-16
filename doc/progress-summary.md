@@ -17,7 +17,7 @@ Phase 1ではレシピ管理と個人アカウント機能を実装する。
 |---|---|---|
 | フロントエンド | Vue 3 + Vite | Vue Router / Pinia を使用 |
 | バックエンド | Java / Spring Boot | スキルセットに合わせて選定 |
-| DB | PostgreSQL | 両技術と相性◎ |
+| DB | MySQL | 両技術と相性◎ |
 | 認証 | JWT（自前実装） | Spring Security を使用 |
 | フロントホスティング | Vercel | 無料枠で対応 |
 | バックエンド+DB | Railway | 月$5〜、Java対応 |

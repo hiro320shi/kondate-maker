@@ -16,19 +16,22 @@
 |---|---|---|
 | フロントエンド | Vue 3 + Vite | Vue Router / Pinia を使用 |
 | バックエンド | Java / Spring Boot | Spring Security でJWT認証 |
-| データベース | PostgreSQL | |
+| データベース | MySQL | |
 | フロントホスティング | Vercel | |
 | バックエンド+DB | Railway | 月$5〜 |
 
 ---
 
-## ディレクトリ構成（予定）
+## ディレクトリ構成
 
 ```
 kondate-maker/
-├── frontend/        # Vue 3 + Vite
-├── backend/         # Spring Boot
-├── doc/             # 要件定義・設計ドキュメント
+├── docker-compose.yml  # Docker全サービス定義
+├── .env                # 環境変数（Git管理外）
+├── .env.example        # 環境変数サンプル
+├── frontend/           # Vue 3 + Vite
+├── backend/            # Spring Boot (Gradle)
+├── doc/                # 要件定義・設計ドキュメント
 └── CLAUDE.md
 ```
 
@@ -62,4 +65,5 @@ kondate-maker/
 | `doc/er-diagram.mermaid` | ERダイアグラム |
 | `doc/feature-er-mapping.md` | 機能一覧 & ER図マッピング |
 | `doc/progress-summary.md` | 設計進捗まとめ |
+| `doc/system-architecture.md` | システム構成・フォルダ構成・環境構築手順 |
 | `doc/4-7todo.md` | 要件定義ToDoリスト |
