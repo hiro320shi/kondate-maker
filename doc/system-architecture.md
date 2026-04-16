@@ -156,7 +156,7 @@ docker compose up --build
 |---|---|
 | フロントエンド | http://localhost:5173 |
 | バックエンドAPI | http://localhost:8080 |
-| MySQL | localhost:3306 |
+| MySQL | localhost:3307 |
 
 ### よく使うコマンド
 
