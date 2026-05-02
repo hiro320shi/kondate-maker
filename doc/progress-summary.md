@@ -131,7 +131,7 @@ Phase 1ではレシピ管理と個人アカウント機能を実装する。
 
 ---
 
-## 6. 進捗サマリー（2026年4月21日時点）
+## 6. 進捗サマリー（2026年5月2日時点）
 
 ```
 ✅ 技術選定
@@ -143,9 +143,13 @@ Phase 1ではレシピ管理と個人アカウント機能を実装する。
 ✅ Docker環境構築（frontend / backend / db）
 ✅ バリデーション仕様・CORS設定の確定
 ✅ バックエンド実装（Entity / Repository / JWT / 会員登録・ログインAPI）
+✅ レシピCRUD API実装（GET/POST/PUT/DELETE /api/v1/recipes）
+✅ カテゴリ一覧API実装（GET /api/v1/categories）
+✅ カテゴリ初期データ投入（DataInitializer）
+✅ フロントエンド実装（Router / Pinia / ログイン / 会員登録 / レシピ一覧 / レシピ登録・編集）
        ↓
-🔜 レシピCRUD API実装（GET/POST/PUT/DELETE /api/v1/recipes）
-🔜 カテゴリ一覧API実装（GET /api/v1/categories）
+🔜 動作確認（docker compose up --build）
+🔜 デプロイ（Vercel + Railway）
 ```
 
 ---
